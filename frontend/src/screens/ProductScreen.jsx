@@ -48,7 +48,7 @@ const ProductScreen = () => {
 
   const { userInfo } = useSelector((state) => state.auth);
 
-  //   console.log([...Array(product.countInStock).keys()]);
+ 
   const addToCartHandler = () => {
     dispatch(addToCart({ ...product, qty }));
     navigate("/cart");
