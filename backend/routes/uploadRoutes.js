@@ -28,7 +28,6 @@ function fileFilter(req, file, cb) {
     cb(new Error('Images only!'), false);
   }
 }
-
 const upload = multer({ storage, fileFilter });
 const uploadSingleImage = upload.single('image');
 
