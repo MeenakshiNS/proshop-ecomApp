@@ -4,6 +4,8 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 dotenv.config();
 import connectDB from './config/db.js'
+import cors from 'cors';
+
 
 import { notFound,errorHandler } from './middleware/errorMiddleware.js';
 
@@ -18,6 +20,8 @@ connectDB();
 
 
 const app= express();
+app.use(cors());
+app.options("*",cors());
 
 
 app.use(express.json());
