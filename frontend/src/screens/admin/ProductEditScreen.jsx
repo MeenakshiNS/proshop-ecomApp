@@ -25,7 +25,7 @@ const ProductEditScreen = () => {
   const {
     data: product,
     isLoading,
-    refetch,
+    // refetch,
     error,
   } = useGetProductDetailsQuery(productId);
 
